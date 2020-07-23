@@ -1,0 +1,29 @@
+.header_fixed{position: fixed;width:100%;display:flex; align-items: center; justify-content: space-between; flex-wrap: nowrap; width:100%; z-index: 1;}
+.title{margin-left: 250px;}
+.tgn i{font-size:25px; margin-left: 35px;}
+.util {display:flex; margin-right: 30px;position: relative; }
+.util li {padding: 0 13px; font-size:12px;}
+/* 유틸효과@@@@@@@@@@@@@@@@@@@@@@@*/
+input[type=text] , input[type=password] { font-size:10px; padding:5px 10px; width:100%;}
+.util li  {padding-bottom:10px; padding-top:15px;}
+.util li a:hover{text-decoration: underline}
+.util_box {position: absolute; font-size:12px; width:100%;top:0; left:0; border:1px solid black;display:none;}
+.util_box ol{border-top:1px solid lightgray; border-bottom:1px solid lightgray;padding:5px 0;margin-top:-1px;}
+.bu {padding:10px 0 ;justify-content: space-between; display: flex; border-top:1px solid lightgray;}
+.util_btn {text-align: center; padding-top:7px; font-size: 10px;}
+.util_btn::after{content:"▼";padding-left:1px;}
+.Log_id input[type=text] ,input[type=password] {border:none; border-bottom:1px solid #f0f0f0; font-size:11px;padding:10px;}
+.Log_bt {border:none; background-color: black ;color:white; width:100%; font-size:10px; height:30px;}
+.Log_ul { display: flex; padding : 5px; }
+.Log_ul li {font-size: 10px;padding : 5px;}
+.Cart_btn {border:none; background-color: black ;color:white; width:100%; font-size:10px; height:30px;}
+.Cart_contents{padding-top:330px;}
+.Cart_price{display:flex; justify-content: space-between;border-bottom:1px solid gray; margin-bottom: 20px; font-size: 11px;}
+/*여기부터 메인@@@@@@@@@@@@@@@@@@@@@2*/
+.sub_navigation{margin:100px 0 0 40px; }
+.sub_nav{position: fixed; display:inline-block;}
+.sub_nav li {padding-bottom: 15px;}
+.sub_nav a {text-decoration: none; color:black; font-size:15px;}
+.sub_nav a:hover {color:lightgray;}
+/*푸터@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.content01{max-width: 960px; margin: 0 auto;}

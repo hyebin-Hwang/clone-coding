@@ -1,0 +1,124 @@
+@media (max-width:1070px){
+     .header_fixed{
+      position: fixed;
+      display:block;
+      align-items:center;
+    }
+      #menu{
+         width:25px;
+         height:4px;
+         margin: 11px 0 0 20px ;
+         cursor:pointer;
+         position:absolute;
+       }
+      .change_nav{
+        width:275px;
+        height: 670px;
+        background-color: gray;
+      }
+      .title{
+       font-size: 21px;
+       text-align: center;
+       top:14px;
+       margin:0;
+      }
+      .sub_navigation{
+        margin:0;
+      }
+      .util{
+        display:none;
+      }
+      .sub_nav{
+        position: absolute;
+        display:block;
+        text-align: center;
+        width:100%;
+        text-align: center;
+        margin-top:30px;
+      }
+      .sub_navigation{
+        position: absolute;
+        width:100%;
+      }
+      .sub_nav li {
+        padding:0;
+      }
+      .sub_nav a {
+        font-size:12px;
+      }
+      .main{
+        margin-top:130px;
+        margin:130px 30px 30px auto;
+      }
+  }
+  @media(max-width:799px){
+     .sub_nav a{font-size:11px;}
+     .main_content{
+      flex-direction: column;
+    }
+     .main_content_wrap{
+      margin-left:40px;
+      margin-right:20px;
+    }
+     .content01 .main_content_text{
+      font-size: 11px;
+      margin-top:5px;
+    }
+     .content02_left{
+      width:100%;
+    }
+     .content02_right{
+      width:100%;
+      margin-top:20px;
+    }
+     .content02_left .main_content_text{
+      font-size:14px;
+      margin-top:5px;
+    }
+     .content02_right .main_content_text{
+      font-size:14px;
+      margin-top:5px;
+    }
+     .content03{
+       display:block;
+     }
+     .content03 .imgbox {
+       width:50%;
+       margin-bottom:20px;
+     }
+     .content03 a {
+        display:flex;
+        justify-content: space-between;
+      }
+     .content03 li {
+        width:100%;
+      }
+      .content03 img {
+        width:100%;
+      }
+      .content03 .main_content_text{
+       width:48%;
+            }
+      .content04_left{width:100%; margin-bottom:30px;}
+      .content04_left .imgbox{
+        width:100%;
+      }
+      .content04_left img {width:100%;}
+      .content04_right{width:100%;}
+      .content04_right ul {
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-between;
+      }
+      .content04_right li {
+        width:47%;
+        margin-bottom:10px;
+      }
+      .content04_right img {
+        width:100%;
+        height:180px;
+      }
+      .content04_right .main_content_text{
+        font-size:14px;
+      }
+  }
