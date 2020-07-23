@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Online Class</title>
+  <script src="https://kit.fontawesome.com/e66429a8fe.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta&family=PT+Sans+Narrow&family=Rubik&display=swap" rel="stylesheet">
+    <style>
+    *{margin:0; padding:0;box-sizing: border-box;}
+    ul{list-style:none;}
+    a{text-decoration: none; color:black;}
+    nav{flex:1 1 20%; border-right:1px solid black; background-color: #455a64;}
+    main{flex:1 1 80%; padding-bottom:130px;border-bottom:1px solid black;}
+    button{outline:none;}
+    input {font-family: 'PT Sans Narrow', sans-serif;}
+    body{font-family: 'PT Sans Narrow', sans-serif; }
+    footer{width:100%;}
+    .body{display:flex;}
+    .content_wrap {
+      margin:20px;
+    }
+    .main_nav h2{
+      margin:30px ;
+      color:white;
+      font-size:23px;
+    }
+    .main_nav{
+      cursor:pointer;
+    }
+    .main_nav .icon{
+      font-size: 30px;
+      margin:5px;
+    }
+    .Mn_ul i{
+      margin: 0 7px;
+    }
+    .Mn_ul li{
+      padding:15px;
+      width:100%;
+      font-size:20px;
+    }
+    .sub_nav{
+      margin:20px;
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .Sb_Ser{
+      display:flex;
+      position: relative;
+      width:300px;
+    }
+    .Sb_Ser .search_bar{
+      width:100%;
+      border:none;
+      outline: none;
+      padding:10px;
+      padding-left: 10px;
+      border-radius: 5px  0 0 5px;
+      background-color:#e1f5fe;
+    }
+    .Sb_Ser .search_icon{
+      width:40px;
+      border: 2px solid black;
+      background-color: #e1f5fe;
+      border-radius:0 5px 5px 0;
+      border:none;
+      outline:none;
+      cursor:pointer;
+    }
+    .Sb_box{
+      display:flex;
+      justify-content: space-between;
+    }
+    .sub_nav span{
+      display:block;
+      padding:8px 10px;
+      white-space: nowrap;
+      padding:
+      border: none;
+      border-radius: 5px;
+      background-color: #455a64;
+      color:#eeeeee;
+      margin:0 5px;
+    }
+    .Sb_icon{
+      display:flex;
+      font-size:34px;
+    }
+    .Sb_icon a {
+      color:#2196f3;
+      display:block;
+      margin:0 10px;
+    }
+     /*TIME TABLE*/
+     /*TIME TABLE*/
+
+    .content_Tt {
+      display:flex;
+      flex-wrap:nowrap;
+      width:100%;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    .content_Tt :hover{
+      background-color:#81c784;
+      box-shadow: 5px 10px 18px #888888;
+      transition: 300ms ease-out;
+    }
+    .content_Tt div{
+      border:1px solid gray;
+      width:15%;
+      padding-left:10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .content_Tt div h4 {
+      padding: 5px 0 5px 0;
+      color:#8d8d8d;
+    }
+    .content_Tt div h5 {
+      padding-bottom: 10px;
+      color:#c7c7c7;
+    }
+
+    .content{
+      height:550px;
+      width:100%;
+      display:flex;
+    }
+
+    .Co_ul :hover{
+      background-color:#90caf9  ;
+      box-shadow: 5px 10px 18px #888888;
+    }
+    .Co_ul{
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height:100%;
+      width:100%;
+      transition: 300ms ease-out;
+    }
+    .Co_ul li{
+      border:1px solid gray;
+      padding:15px;
+      width:100%;
+      text-align: center;
+      background-color: #455a64;
+      border-radius: 5px;
+    }
+    .content_Co{
+      flex:1 1 15%;
+      height:100%;
+      width:100%;
+    }
+    .content_Vi{
+      flex:1 1  47%;
+      width:100%;
+      margin: 0 20px 0 20px;
+      height:100%;
+    }
+    video{
+      border:1px solid black;
+      border-radius: 5px;
+    }
+    .content_Sj{
+      flex:1 1  33%;
+      width:100%;
+      height:100%;
+      display: flex;
+      position: relative;
+      margin-left:20px;
+    }
+    .content_Sj ol{
+      display:flex;
+      flex-direction: column;
+      width:100%;
+      height:100%;
+    }
+    .content_Sj li{
+      padding: 20px;
+    }
+    .Sj_01{
+      width:50%;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+    .Sj_01 h2:hover{
+      border-bottom:2px solid blue;
+    }
+    .Sj_01 h2{
+      width:100%;
+      text-align: center;
+      padding:15px 0 15px 0;
+    }
+    .Sj_01 h6{
+      padding:5px 0 5px 0;
+    }
+    .Sj_02{
+      width:50%;
+      cursor: pointer;
+    }
+    .Sj_02 h2:hover {
+      border-bottom: 2px solid blue;
+    }
+    .Sj_02 li{
+      display:none;
+    }
+    .Sj_02 h2{
+      width:100%;
+      text-align: center;
+      padding:15px 0 10px 0;
+    }
+
+    .content_Bt{
+      display: flex;
+      width:100%;
+    }
+    .Info{
+      flex:1 1 62%;
+      margin: 20px 0 20px 0 ;
+    }
+    .content_Ts{
+      flex: 1 1 35%;
+      padding-left:30px;
+    }
+    .Info_left01{
+      flex-wrap: nowrap;
+      width:100%;
+    }
+    .Info_left01 h5 img {
+      width:30px;
+      height:30px;
+      border:1px solid black;
+      border-radius: 15px;
+      margin-right:5px;
+    }
+    .Info_left01 h5{
+      display:flex;
+      align-items: center;
+      padding: 5px 0 5px 0 ;
+      color:gray;
+    }
+    .Info_left01 p{
+      color:red;
+      font-size:13px;
+
+    }
+    .Info_left01 .Info_right{
+      margin-top:10px;
+      text-align: right;
+    }
+    .Info_left01 .Info_right button{
+     white-space: nowrap;
+     color:white;
+     font-weight: bold;
+     border-radius: 5px;
+     font-size:15px;
+     cursor:pointer;
+    }
+    .Info_left01 .Info_right .Bt01{
+      padding:10px 10px;
+      background-color: blue;
+      border: 1px solid blue;
+    }
+    .Info_left01 .Info_right .Bt01 i {
+      font-size: 20px;
+      margin-left:5px;
+    }
+    .Info_left01 .Info_right .Bt02 {
+      color:white;
+      margin-left:10px;
+      padding:10px 6px;
+      background-color: red;
+      border: 1px solid red;
+    }
+    .Info_left01 .Info_right .Bt02 i {
+      font-size:20px;
+      margin-left:3px;
+    }
+
+
+    .left02_ul{
+      display:flex;
+      flex-wrap: nowrap;
+      width::100%;
+      font-size:17px;
+      position: relative;
+      justify-content: space-around;
+      margin-top:25px;
+    }
+    .left02_li {
+      padding:10px;
+      cursor:pointer;
+    }
+    .left02_content{
+       position: absolute;
+       margin: 75px 0 0 10px;
+     }
+    .left02_content li {
+       margin-bottom: 20px;
+       margin-left: 15px;
+     }
+    .left02_content p {
+      font-size:13px;
+      color:gray;
+    }
+
+
+    .content_Ts span{
+      font-size:17px;
+      font-weight: bold;
+      display:block;
+      margin:10px 0  0 10px;
+    }
+    .content_Ts li {
+      margin-bottom: 20px;
+    }
+    .Ts_right p{
+      font-size:13px;
+    }
+    .content_Ts ul{
+      margin-top:30px;
+    }
+    .content_Ts li{
+      display:flex;
+    }
+    .content_Ts .Ts_right{
+      margin-left: 10px;
+    }
+
+
+    .footer_sec{
+      width:100vw;
+      display:flex;
+      justify-content: space-around;
+      flex-wrap: nowrap;
+      position: relative;
+      padding:20px 0;
+    }
+    .footer_sec .footer_li{
+
+    }
+    .footer_li h3{
+      font-size: 15px;
+      color:gray;
+    }
+    .footer_li li{
+      padding: 5px 0 ;
+      cursor:pointer;
+    }
+
+    @media (max-width:1024px){
+      .main_nav  .Mn_ul li{
+        font-size:15px;
+      }
+      .main_nav .icon{
+        font-size:20px;
+      }
+      .main_nav h2{
+        font-size:16px;
+      }
+    }
+    @media (max-width:769px){
+      .main_nav .icon{
+        display:block;
+        text-align: center;
+      }
+      .main_nav .Mn_ul i {
+        display:block;
+      }
+    }
+    .Sj_02 ol {
+      display:none;
+    }
+    .Sj_02 ol :active{
+      display:block;
+    }
+  </style>
+</head>
+<body>
+  <div class="body">
+    <nav>
+    <div class="main_nav">
+      <h2>BatchOF<i class="icon fas fa-book-open"></i></h2>
+      <ul class="Mn_ul">
+        <li><i class="fas fa-handshake"></i> Live Lectures</li>
+        <li><i class="far fa-calendar-alt"></i> Time Table</li>
+        <li><i class="fas fa-save"></i> Saved Lectures</li>
+        <li><i class="fas fa-link"></i> Important Links</li>
+        <li><i class="fas fa-envelope-open-text"></i> Exams & Tests</li>
+        <li><i class="fas fa-school"></i> Academic Section</li>
+        <li><i class="fas fa-users-cog"></i> Settings</li>
+      </ul>
+    </div>
+    </nav>
+    <main>
+    <div class="sub_nav">
+      <div class="Sb_Ser">
+        <input type="search" class="search_bar"placeholder="Search Note">
+        <button type="submit" class="search_icon">
+           <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <div class="Sb_box">
+        <span>1 Class Missed</span>
+        <span style= "background-color:#2196f3">15Min <i class="fas fa-hourglass-half"></i></span>
+        <span>Today,Monday 15 June 2020 <i class="far fa-calendar-alt"></i></span>
+      </div>
+      <div class="Sb_icon">
+        <a href="#"><i class="fab fa-facebook-square"></i></a>
+        <a href="#"><i class="fab fa-twitter-square"></i></a>
+        <a href="login.html" style="color:#455a64; font-size:30px;"><i class="fas fa-unlock-alt" ></i></a>
+      </div>
+    </div>
+    <div class="content_wrap">
+      <div class="content_Tt">
+        <div class="content_Tt01">
+          <h4>Math Class</h4>
+          <h5>09:30am ~ 10:30am</h5>
+        </div>
+        <div class="content_Tt02">
+          <h4>Science Class</h4>
+          <h5>10:30am ~ 11:30am</h5>
+        </div>
+        <div class="content_Tt03">
+          <h4>History Class</h4>
+          <h5>11:30am ~ 12:30pm</h5>
+        </div>
+        <div class="content_Tt04">
+          <h4>EVS Class</h4>
+          <h5>1:30pm ~ 2:30pm</h5>
+        </div>
+        <div class="content_Tt05">
+          <h4>English Class</h4>
+          <h5>2:30pm ~ 3:30pm</h5>
+        </div>
+        <div class="content_Tt06">
+          <h4>Brain Class</h4>
+          <h5>3:30pm ~ 4:30pm</h5>
+        </div>
+      </div>
+      <div class="content">
+        <div class="content_Co">
+          <ul class="Co_ul">
+            <li>
+              <h1><i class="fas fa-question"></i></h1>
+              Raise Hand
+            </li>
+            <li>
+              <h1><i class="fas fa-microphone"></i></h1>
+              Ask Question
+            </li>
+            <li>
+              <h1><i class="fas fa-thumbs-up"></i></h1>
+              Topic Share
+            </li>
+            <li>
+              <h1><i class="fas fa-thumbs-down"></i></h1>
+              Topic Unshare
+            </li>
+            <li>
+              <h1><i class="fas fa-tasks"></i></h1>
+              Task
+            </li>
+          </ul>
+        </div>
+        <div class="content_Vi">
+          <video style="width:100%; height:100%;" controls >
+          <source src="small.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="content_Sj">
+          <div class="Sj_01"><h2>Topic</h2>
+            <ol class="Sj01_ol">
+              <li>
+                <h4>The Brain</h4>
+                <h6>Chapter 1. sssss</h6>
+              </li>
+              <li>
+                <h4>The Spinal Card</h4>
+                <h6>Chapter 2. sssss</h6>
+              </li>
+              <li>
+                <h4>Nerves</h4>
+                <h6>Chapter 3. sssss</h6>
+              </li>
+              <li>
+                <h4>The Eyes</h4>
+                <h6>Chapter 4. sssss</h6>
+              </li>
+              <li>
+                <h4>Reflex Action</h4>
+                <h6>Chapter 5. sssss</h6>
+              </li>
+            </ol>
+          </div>
+          <div class="Sj_02"><h2>Comments</h2>
+            <ol class_"Sj02_ol">
+              <li>af</li>
+              <li>af</li>
+              <li>af</li>
+              <li>af</li>
+              <li>af</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="content_Bt">
+        <div class="Info">
+          <div class="Info_left">
+           <div class="Info_left01">
+             <div class="Info_Pro">
+                <h4>Chapter : The Nervous System</h4>
+                <h5><img src="food1.png"alt="">Mrs Prabba Karan Dey</h5>
+                <p>This icon not look right or giving you trouble on your site or project?</p>
+             </div>
+             <div class="Info_right">
+                <button class="Bt01">Save Lecture<i class="fas fa-save"></i></button>
+                <button class="Bt02">Important Links<i class="fas fa-comment-alt"></i></button>
+             </div>
+           </div>
+           <div class="Info_left02">
+             <ul class=" left02_ul">
+               <li class="left02_li">Note</li>
+                 <ol class="left02_content">
+                   <li>The Brain</li>
+                   <p>Don't sweat it - neither has Bono. Maybe one of our other 3,000+ icons are a better fit? No? You can always check our icon leaderboard to see if our community already asked for it.</p>
+                   <br>
+                   <p>This icon not look right or giving you trouble on your site or project? Let us know by filing a new issue. We'll get it right as rain for you and everyone else.</p>
+                 </ol>
+               <li class="left02_li">Question and Answers</li>
+               <li class="left02_li">Home Work</li>
+               <li class="left02_li">Test</li>
+             </ul>
+           </div>
+          </div>
+        </div>
+        <div class="content_Ts">
+          <span>Teacher Section</span>
+            <ul>
+              <li>
+                <div class="Ts_left">
+                  <input type="checkbox" style="width:20px;height:20px;">
+                </div>
+                <div class="Ts_right">
+                  <h4>The Brain</h4>
+                  <p>Where multiple controls exist </p>
+                  <p>radio buttons allow one to be selected out </p>
+                </div>
+              </li>
+              <li>
+                <div class="Ts_left">
+                  <input type="checkbox" style="width:20px;height:20px;">
+                </div>
+                <div class="Ts_right">
+                  <h4>The Eyes</h4>
+                  <p>If none are checked </p>
+                  <p>the recipe name's checkbox is set to unchecked.</p>
+                </div>
+              </li>
+              <li>
+                <div class="Ts_left">
+                  <input type="checkbox" style="width:20px;height:20px;">
+                </div>
+                <div class="Ts_right">
+                  <h4>The Spinal Card</h4>
+                  <p>instead of a check/tick in most browser</p>
+                  <p>There are not many use cases for this property. </p>
+                </div>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    </main>
+  </div>
+  <footer>
+    <ul class="footer_sec">
+      <li class="footer_li">
+        <h3>PROJECT</h3>
+        <ul>
+          <li>Latest Realease</li>
+          <li>Updates</li>
+          <li>License</li>
+          <li>Github</li>
+        </ul>
+      </li>
+      <li class="footer_li">
+        <h3>CLASS</h3>
+        <ul>
+          <li>Science</li>
+          <li>Math</li>
+          <li>Music</li>
+          <li>Progamming</li>
+        </ul>
+      </li>
+      <li class="footer_li">
+        <h3>SUPPORT</h3>
+        <ul>
+          <li>Get Help</li>
+          <li>Report a Bug</li>
+          <li>Common Question</li>
+          <li>Trouble</li>
+        </ul>
+      </li>
+      <li class="footer_li">
+        <h3>TEACHER</h3>
+        <ul>
+          <li>Blog</li>
+          <li>Status</li>
+          <li>Conteat Us</li>
+          <li>Get Help</li>
+        </ul>
+      </li>
+    </ul>
+  </footer>
+  <script src="java.js"></script>
+</body>
+</html>

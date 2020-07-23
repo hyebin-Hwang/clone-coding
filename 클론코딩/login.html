@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>로그인</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+    body{display:flex; height:100%; flex-wrap: nowrap;}
+    input:focus { outline: none; color:black;}
+    h2{ text-align: center; margin-bottom: 50px;}
+    a{text-decoration: none;color:black;}
+    select :focus{ outline: none; }
+    option :focus{ outline: none; }
+    .log_left{
+      flex:1 1 35%;
+      height:100vh;
+      width:100%;
+      position: relative;
+      display:flex;
+      align-items: center;
+    }
+    .log_right{
+      flex: 1 1 65%;
+      border-left:1px solid gray;
+      height:100vh;
+      width:100%;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .log_right img{
+      width:70%;
+     }
+
+    .log_sec{
+      width:100%;
+    }
+    input[type=text], input[type=password] {
+      padding:13px 5px;
+      border-radius: 5px;
+      width:80%;
+      display:block;
+      margin:0 auto;
+      background-color: #c5cae9;
+      border:none;
+      color:gray;
+      padding-left: 13px;
+      margin-bottom: 20px;
+    }
+    .log03{
+      width:100%;
+      display:flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    #Bir{
+      width:38%;
+      margin:0;
+    }
+    select{
+      padding:10px 5px;
+      padding-left: 10px;
+      border-radius: 5px;
+      width:40%;
+      background-color: #c5cae9;
+      border:none;
+      color:gray;
+      display:block;
+      margin-right: 7px;
+    }
+
+    .log_sec p{
+      font-size:10px;
+      text-align: center;
+      color:gray;
+    }
+    .log_sec p span{
+      color:blue;
+    }
+
+    button{
+      padding:10px 0;
+      background-color: #5472d3;
+      border:none;
+      font-weight: bold;
+      border-radius: 5px;
+      outline:none;
+      cursor:pointer;
+      width:80%;
+      margin: 0 auto;
+      display:block;
+      margin-top:15px;
+    }
+
+    .log_bottom p{
+      color:gray;
+      cursor: pointer;
+      text-align: center;
+      font-size:10px;
+      margin-top:10px;
+    }
+   /*Responsive Web*/
+
+   @media (max-width:899px){
+     h2{font-size:18px;}
+     input[type=text], input[type=password]{width:70%;}
+     #Bir{width:32%;}
+     select{width:36%;}
+     button{width:70%;}
+   }
+   @media (max-width:699px){
+     input[type=text], input[type=password]{
+      font-size:10px;
+     }
+     select{
+       font-size:8px;
+     }
+     h2{font-size:15px;}
+   }
+    @media (max-width:426px){
+      .log_right{
+        display:none;
+      }
+      select{
+        font-size:10px;
+      }
+     }
+
+  </style>
+</head>
+<body>
+  <div class="log_left">
+    <div class="log_sec">
+      <a href="index.html"><h2>Welcome to Online</h2></a>
+      <input type="text" id="email" placeholder="Email address">
+      <input type="password" id="password" placeholder="Create password">
+      <div class="log03">
+        <select name="gender" id="">
+          <option value="gender">Gender</option>
+          <option value="male">male</option>
+          <option value="female">female</option>
+        </select>
+        <input type="text" id="Bir" placeholder="Birthday">
+      </div>
+      <input type="text" id="zip" placeholder="ZIP">
+      <p>By signing up, your confi rem that you accept our</p>
+      <p><span>Terms of Use</span> and <span>Privacy policy</span></p>
+      <button type="button" name="button">Sign up</button>
+      <div class="log_bottom">
+        <p>Euraka Rewards 2020</p>
+      </div>
+    </div>
+  </div>
+  <div class="log_right">
+    <img src="login.png" alt="">
+  </div>
+</body>
+</html>
